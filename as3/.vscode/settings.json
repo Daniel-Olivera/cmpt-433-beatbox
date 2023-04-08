@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "audiomixer_template.h": "c",
+        "beatgenerator.h": "c",
+        "periodtimer.h": "c",
+        "stdio.h": "c"
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>BeagleBone Beat-Box</title>
+	<link rel="stylesheet" href="stylesheets/style.css" type="text/css"/>
+</head>
+
+<body>
+<form action="">
+	<h1>BeagleBone Beat-Box</h1>
+    <div id="beatSelectionBox">
+        <b style="font-size:24px;">Drum Beat Selection</b>
+        <p>
+            Current drum beat mode is: <b><span id="beatName"></span></b>
+        </p>
+        
+        <input type="button" id="noBeatBtn" value="None"/>
+        <input type="button" id="rockOneBtn" value="Rock #1"/>
+        <input type="button" id="rockTwoBtn" value="Rock #2"/>
+
+        <p>
+            <b style="font-size: 20px;">Volume</b>
+        </p>
+
+        <input type="button" id="decreaseVolumeBtn" value="-"/>
+        <input type="text" id="volumeTxt" value="" size="3" readonly/>
+        <input type="button" id="increaseVolumeBtn" value="+"/>
+        (0 - 100)
+
+        <p>
+            <b style="font-size: 20px;">Tempo</b>
+        </p>
+
+        <input type="button" id="decreaseTempoBtn" value="-"/>
+        <input type="text" id="tempoTxt" value="" size="3" readonly/>
+        <input type="button" id="increaseTempoBtn" value="+"/>
+        (BPM)
+
+        <p>
+            <b style="font-size: 20px;">Play Drum Sounds</b>
+        </p>
+
+        <input type="button" id="hihatBtn" value="Hi-Hat"/>
+        <input type="button" id="snareBtn" value="Snare"/>
+        <input type="button" id="bassBtn" value="Bass"/>
+        <p></p>
+        <input type="button" id="terminateBtn" value="Terminate"/>
+    </div>
+
+    <div id="statusBox">
+        <b style="font-size:24px;">BeatBox's Status</b>
+        <p>
+            Device up for: <span id="deviceUptime"></span> 
+        </p>
+    </div>
+
+    <div id="errorBox">
+        <b style="font-size:24px;">Server Error</b>
+        <p>
+            Server error detected. Please resolve error before continuing.
+        </p>
+        <p>
+            <b style="font-size:12px;">SERVER ERROR: No response from beat-box application. Is it running?</b>
+        </p>
+
+    </div>
+
+    <script src='/socket.io/socket.io.js' type='text/javascript'></script>
+	<script src='http://code.jquery.com/jquery-1.11.1.min.js' type='text/javascript'></script>
+	<script type="text/javascript" src="javascripts/code.js"></script>
+</form>
+</body>
+</html>
